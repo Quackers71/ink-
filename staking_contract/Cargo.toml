@@ -1,0 +1,38 @@
+[package]
+name = "staking_contract"
+version = "0.1.0"
+authors = ["Q"]
+edition = "2021"
+
+[dependencies]
+ink = { git = "https://github.com/paritytech/ink", rev = "4655a8b4413cb50cbc38d1b7c173ad426ab06cde", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+openbrush = { tag = "3.0.0-beta", git = "https://github.com/Brushfam/openbrush-contracts", default-features = false, features = ["psp22"] }
+#cargo-contract = "3.2.0"
+#contract-build = "3.2.0"
+#ink_ir = "4.2.1"
+
+[dev-dependencies]
+#ink_e2e = "4.2.0"
+
+[lib]
+#name = "staking_contract"
+path = "lib.rs"
+#crate-type = [
+    # Used for normal contract Wasm blobs.
+#    "cdylib",
+#]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+
+    "openbrush/std",
+]
+ink-as-dependency = []
+e2e-tests = []
