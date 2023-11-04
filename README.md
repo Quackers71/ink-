@@ -15,6 +15,7 @@ Resources:</br>
 - OpenBrush: https://github.com/Brushfam/openbrush-contracts</br>
 ```
 cargo install --force --locked cargo-contract -—version 2.0.0-beta.1
+# output = Replaced package `cargo-contract v3.2.0` with `cargo-contract v2.0.0-beta.1` (executable `cargo-contract`)
 rustup toolchain add nightly
 rustup default nightly
 
